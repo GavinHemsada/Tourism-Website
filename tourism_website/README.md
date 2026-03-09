@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# WanderCeylon | Premium Tourism & Adventure Platform
 
-## Getting Started
+WanderCeylon is a modern, high-performance tourism website designed to provide users with an immersive and luxury travel planning experience. Built with the latest Next.js 16 technologies, it features stunning glassmorphic designs, fluid animations, and a focus on visual storytelling.
 
-First, run the development server:
+## ✨ Features
+
+- **🚢 Immersive Hero Experience**: A cinematic introduction to dream destinations with smooth parallax effects.
+- **🏝️ Dynamic Destinations**: Explore curated locations with dedicated detail pages and high-quality visual galleries.
+- **🎒 Luxury Tour Packages**: Comprehensive tour packages featuring highlights, pricing, and booking integration.
+- **✨ Premium UI/UX**: State-of-the-art glassmorphism, dynamic mesh backgrounds, and sleek typography.
+- **🚀 High Performance**:
+  - **SSG (Static Site Generation)** for instant page loads on dynamic routes.
+  - **Optimized Images** using Next.js Image component with responsive sizing.
+  - **Server/Client Boundary Optimization** for minimal client-side bloat.
+- **📱 Fully Responsive**: Seamless experience across mobile, tablet, and desktop devices.
+- **🛠️ SEO Ready**: Comprehensive metadata support, dynamic sitemaps, and search-engine-friendly architecture.
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
+- **Library**: [React 19](https://react.dev/)
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Image Optimization**: [Sharp](https://sharp.pixelplumbing.com/)
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18.x or later
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/GavinHemsada/Tourism-Website.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd tourism_website
+   ```
+
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Development
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To create an optimized production build:
 
-## Learn More
+```bash
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 📁 Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `app/`: Contains all pages and components using the Next.js App Router.
+  - `components/`: Reusable UI components (Navbar, Footer, etc.).
+  - `destinations/`: Destination listing and dynamic detail pages.
+  - `packages/`: Tour package listing and dynamic detail pages.
+  - `lib/`: Utility functions and data layer.
+- `public/`: Static assets like logos and icons.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📄 License
 
-## Deploy on Vercel
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Developed with ❤️ by [WanderCeylon Team](https://github.com/GavinHemsada)
