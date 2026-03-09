@@ -29,7 +29,7 @@ export default function Navbar() {
           className="text-2xl font-bold text-primary flex items-center gap-2"
         >
           <Image 
-            src="/logo.png" 
+            src="/icon.png" 
             alt="WanderCeylon Logo" 
             width={32} 
             height={32} 
