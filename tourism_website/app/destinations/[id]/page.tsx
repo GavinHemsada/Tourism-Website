@@ -3,6 +3,21 @@ import Link from "next/link";
 import { MapPin, Star, Globe, Camera, Info, ArrowLeft } from "lucide-react";
 import { destinations } from "@/app/lib/data";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const { id } = await params;
+  const dest = destinations.find((d) => d.id === id);
+  if (!dest) return {};
+  
+  return {
+    title: dest.name,
+    description: dest.description,
+    openGraph: {
+      images: [dest.image],
+    },
+  };
+}
 
 export function generateStaticParams() {
   return destinations.map((d) => ({

@@ -10,11 +10,42 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "WanderCeylon | Explore Your Dream Destinations",
+  title: {
+    default: "WanderCeylon | Explore Your Dream Destinations",
+    template: "%s | WanderCeylon"
+  },
+  description: "Discover the world's most beautiful destinations and ultra-luxury tour packages with WanderCeylon. Your legend starts today.",
+  keywords: ["tourism", "travel", "WanderCeylon", "luxury travel", "vacation", "destinations", "tour packages"],
+  authors: [{ name: "WanderCeylon Team" }],
+  creator: "WanderCeylon",
+  publisher: "WanderCeylon",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   icons: {
     icon: "/icon.png",
+    apple: "/icon.png",
   },
-  description: "Discover the world's most beautiful destinations and tour packages with WanderCeylon.",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: "WanderCeylon",
+    title: "WanderCeylon | Explore Your Dream Destinations",
+    description: "Discover the world's most beautiful destinations and tour packages with WanderCeylon. Your legend starts today.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({

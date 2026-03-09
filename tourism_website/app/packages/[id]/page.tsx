@@ -2,6 +2,21 @@ import Image from "next/image";
 import { Clock, CheckCircle, MapPin, Share2, Heart, Calendar, Users, Star } from "lucide-react";
 import { tourPackages } from "@/app/lib/data";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const { id } = await params;
+  const pkg = tourPackages.find((p) => p.id === id);
+  if (!pkg) return {};
+  
+  return {
+    title: pkg.name,
+    description: pkg.description,
+    openGraph: {
+      images: [pkg.image],
+    },
+  };
+}
 
 export function generateStaticParams() {
   return tourPackages.map((pkg) => ({
