@@ -1,16 +1,18 @@
-"use client";
-
-import { use } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { MapPin, Star, Globe, Camera, Info, ArrowLeft } from "lucide-react";
 import { destinations } from "@/app/lib/data";
 import { notFound } from "next/navigation";
 
-export default function DestinationDetailsPage({ params }: { params: Promise<{ id: string }> }) {
-  const resolvedParams = use(params);
-  const dest = destinations.find((d) => d.id === resolvedParams.id);
+export function generateStaticParams() {
+  return destinations.map((d) => ({
+    id: d.id,
+  }));
+}
+
+export default async function DestinationDetailsPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const dest = destinations.find((d) => d.id === id);
 
   if (!dest) {
     notFound();
@@ -48,11 +50,7 @@ export default function DestinationDetailsPage({ params }: { params: Promise<{ i
         
         <div className="absolute inset-0 flex items-end mb-20 px-6">
             <div className="max-w-7xl mx-auto w-full">
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="space-y-6 max-w-4xl"
-                >
+                <div className="space-y-6 max-w-4xl">
                     <div className="flex items-center gap-3">
                         <div className="bg-primary px-4 py-2 rounded-xl text-white font-bold text-sm tracking-widest uppercase">
                             Featured
@@ -71,7 +69,7 @@ export default function DestinationDetailsPage({ params }: { params: Promise<{ i
                             <Globe className="w-5 h-5 text-accent" /> Explore Now
                         </span>
                     </div>
-                </motion.div>
+                </div>
             </div>
         </div>
       </section>

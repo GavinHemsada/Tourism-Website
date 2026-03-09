@@ -110,6 +110,7 @@ export default function HomePage() {
                   src={dest.image}
                   alt={dest.name}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   className="object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10" />
@@ -135,9 +136,10 @@ export default function HomePage() {
             <div className="relative">
                 <div className="relative h-[600px] w-full rounded-[40px] overflow-hidden shadow-2xl z-10">
                     <Image 
-                        src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" 
+                        src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" 
                         alt="Why choose us" 
                         fill 
+                        sizes="(max-width: 1024px) 100vw, 50vw"
                         className="object-cover"
                     />
                 </div>
@@ -221,6 +223,7 @@ export default function HomePage() {
                     src={pkg.image}
                     alt={pkg.name}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-md px-4 py-1.5 rounded-full text-slate-800 font-bold text-sm z-20">
@@ -315,6 +318,7 @@ export default function HomePage() {
                     src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=2000&q=80"
                     alt="CTA Background"
                     fill
+                    sizes="100vw"
                     className="object-cover"
                 />
             </div>

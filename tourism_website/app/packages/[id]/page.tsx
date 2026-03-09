@@ -1,14 +1,17 @@
-"use client";
-
-import { use } from "react";
 import Image from "next/image";
 import { Clock, CheckCircle, MapPin, Share2, Heart, Calendar, Users, Star } from "lucide-react";
 import { tourPackages } from "@/app/lib/data";
 import { notFound } from "next/navigation";
 
-export default function PackageDetailsPage({ params }: { params: Promise<{ id: string }> }) {
-  const resolvedParams = use(params);
-  const pkg = tourPackages.find((p) => p.id === resolvedParams.id);
+export function generateStaticParams() {
+  return tourPackages.map((pkg) => ({
+    id: pkg.id,
+  }));
+}
+
+export default async function PackageDetailsPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const pkg = tourPackages.find((p) => p.id === id);
 
   if (!pkg) {
     notFound();
