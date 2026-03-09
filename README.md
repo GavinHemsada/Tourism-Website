@@ -2,6 +2,8 @@
 
 WanderCeylon is a modern, high-performance tourism website designed to provide users with an immersive and luxury travel planning experience. Built with the latest Next.js 16 technologies, it features stunning glassmorphic designs, fluid animations, and a focus on visual storytelling.
 
+![WanderCeylon Preview](./tourism_website/public/preview.png)
+
 ## Features
 
 - **Immersive Hero Experience**: A cinematic introduction to dream destinations with smooth parallax effects.
