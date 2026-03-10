@@ -1,6 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
-import { MapPin, Star, Globe, Camera, Info, ArrowLeft } from "lucide-react";
+import { MapPin, Star, Globe, Camera, Info } from "lucide-react";
 import { destinations } from "@/app/lib/data";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
