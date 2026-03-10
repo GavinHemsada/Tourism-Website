@@ -42,16 +42,6 @@ export default async function DestinationDetailsPage({ params }: { params: Promi
 
   return (
     <main className="min-h-screen pb-24">
-      {/* Back Button */}
-      <div className="absolute top-32 left-8 z-50">
-        <Link 
-            href="/destinations" 
-            className="flex items-center gap-2 bg-white/20 hover:bg-white/40 backdrop-blur-xl border border-white/20 text-white px-6 py-3 rounded-2xl font-black transition-all group"
-        >
-            <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" /> Back
-        </Link>
-      </div>
-
       {/* Hero Section */}
       <section className="relative h-[70vh] w-full overflow-hidden">
         <Image 
